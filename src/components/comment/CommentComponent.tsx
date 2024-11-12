@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
-import {IComments} from "@/models/IComments";
+import {IComment} from "@/models/IComment";
 import Link from "next/link";
 
 type Props = {
-    comment: IComments
+    comment: IComment
 }
-const CommentPage: FC<Props> = ({comment}) => {
+const CommentComponent: FC<Props> = ({comment}) => {
     return (
         <div>
             <Link href={'/comments/' + comment.id.toString()}>{comment.name}</Link>
@@ -13,4 +13,4 @@ const CommentPage: FC<Props> = ({comment}) => {
     );
 };
 
-export default CommentPage;
+export default CommentComponent;
